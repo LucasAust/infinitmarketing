@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors - Minimal & Stark */
+  --bg: #0a0a0a;
+  --ink: #ededed;
+  --muted: #888888;
+  --accent: #fff; /* High contrast */
+  --border: #333;
+  
+  /* Animation */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-mono);
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  p { margin-bottom: 1em; }
+
+  ::selection {
+    background: #fff;
+    color: #000;
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .btn {
+    @apply relative overflow-hidden inline-flex items-center justify-center px-6 py-3 border text-sm uppercase tracking-wider transition-all duration-500 ease-out;
+    font-family: var(--font-mono);
+  }
+
+  /* Ensure text stays on top of the slide effect */
+  .btn span, .btn p {
+    position: relative;
+    z-index: 20;
+  }
+
+  .btn-solid {
+    @apply bg-white text-black border-white;
+  }
+
+  .btn-solid::before {
+    content: '';
+    @apply absolute inset-0 bg-[#0a0a0a] transform translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-10;
+  }
+
+  .btn-solid:hover {
+    @apply text-white border-white;
+  }
+
+  .btn-solid:hover::before {
+    @apply translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-white border-[var(--border)] hover:border-white hover:bg-white/5;
+  }
+}
+
