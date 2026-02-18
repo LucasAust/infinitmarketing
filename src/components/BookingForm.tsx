@@ -3,12 +3,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { clsx } from 'clsx';
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+import { supabase } from '@/lib/supabase';
 
 export function BookingForm() {
   const [loading, setLoading] = useState(false);
@@ -30,6 +25,7 @@ export function BookingForm() {
     try {
       const { error } = await supabase.from('marketingsignups').insert([payload]);
       if (error) throw error;
+
       setSuccess(true);
       form.reset();
     } catch (err) {
