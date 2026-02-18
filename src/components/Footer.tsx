@@ -10,18 +10,10 @@ export function Footer() {
          <div className="flex flex-col md:flex-row gap-12 md:gap-24 font-mono text-sm uppercase tracking-wider">
             <div className="flex flex-col gap-4">
                <span className="text-[var(--muted)] border-b border-[var(--border)] pb-2 mb-2">Navigation</span>
-               <Link href="#why" className="hover:text-white transition-colors">Philosophy</Link>
-               <Link href="#tracks" className="hover:text-white transition-colors">Tracks</Link>
-            </div>
-            <div className="flex flex-col gap-4">
-               <span className="text-[var(--muted)] border-b border-[var(--border)] pb-2 mb-2">Legal</span>
-               <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-               <Link href="#" className="hover:text-white transition-colors">Terms</Link>
-            </div>
-            <div className="flex flex-col gap-4">
-               <span className="text-[var(--muted)] border-b border-[var(--border)] pb-2 mb-2">Social</span>
-               <Link href="#" className="hover:text-white transition-colors">Twitter</Link>
-               <Link href="#" className="hover:text-white transition-colors">Instagram</Link>
+               <Link href="#why" className="hover:text-white transition-colors">How It Works</Link>
+               <Link href="#app" className="hover:text-white transition-colors">The App</Link>
+               <Link href="#tracks" className="hover:text-white transition-colors">Roadmap</Link>
+               <Link href="#form" className="hover:text-white transition-colors">Sign Up</Link>
             </div>
          </div>
       </div>
