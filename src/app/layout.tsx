@@ -33,7 +33,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-mono bg-[#0a0a0a] text-[#e0e0e0] antialiased selection:bg-[#fff] selection:text-[#000]">
+      <body className="font-mono bg-[#181E1A] text-white antialiased selection:bg-[#7EBA98] selection:text-[#181E1A]">
         <div className="fixed inset-0 z-[-1] pointer-events-none opacity-[0.03]" 
              style={{ 
                backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', 

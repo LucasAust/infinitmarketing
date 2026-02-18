@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  /* Colors - Minimal & Stark */
-  --bg: #0a0a0a;
-  --ink: #ededed;
-  --muted: #888888;
-  --accent: #fff; /* High contrast */
-  --border: #333;
+  /* Colors - Green / Dark Forest */
+  --bg: #181e1a;
+  --ink: #fff;
+  --muted: #a0b0a6;
+  --accent: #7eba98;
+  --border: #2d332f;
   
   /* Animation */
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -40,8 +40,8 @@
   p { margin-bottom: 1em; }
 
   ::selection {
-    background: #fff;
-    color: #000;
+    background: #7eba98;
+    color: #181e1a;
   }
 }
 
@@ -49,7 +49,22 @@
   .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding: 0 2rem;
+    }
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
   .btn {
@@ -64,16 +79,16 @@
   }
 
   .btn-solid {
-    @apply bg-white text-black border-white;
+    @apply bg-[#7EBA98] text-[#181E1A] border-[#7EBA98];
   }
 
   .btn-solid::before {
     content: '';
-    @apply absolute inset-0 bg-[#0a0a0a] transform translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-10;
+    @apply absolute inset-0 bg-[#181E1A] transform translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-10;
   }
 
   .btn-solid:hover {
-    @apply text-white border-white;
+    @apply text-[#7EBA98] border-[#7EBA98];
   }
 
   .btn-solid:hover::before {

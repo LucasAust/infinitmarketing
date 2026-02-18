@@ -25,9 +25,8 @@ export function Footer() {
             </div>
          </div>
       </div>
-      <div className="mt-12 pt-8 border-t border-[var(--border)] font-mono text-xs text-[var(--muted)] flex justify-between">
+      <div className="mt-12 pt-8 border-t border-[var(--border)] font-mono text-xs text-[var(--muted)]">
          <span>© 2024 Infinit Network.</span>
-         <span>Austin, TX</span>
       </div>
     </footer>
   );

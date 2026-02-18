@@ -57,10 +57,10 @@ export default function MatrixRain({ contentRef }: Props) {
 
     const draw = () => {
       // 1. CLEAR / FADE RAIN
-      ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+      ctx.fillStyle = 'rgba(24, 30, 26, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = 'rgba(200, 200, 200, 0.3)'; 
+      ctx.fillStyle = 'rgba(126, 186, 152, 0.3)'; 
       ctx.font = `14px "Bitcount Prop Single", monospace`;
 
       const fontSize = 14;
@@ -113,7 +113,7 @@ export default function MatrixRain({ contentRef }: Props) {
                         vx: 0,
                         vy: 0,
                         life: 0.4, 
-                        color: 'rgba(255, 255, 255, 0.8)' // Higher opacity
+                        color: 'rgba(126, 186, 152, 0.8)'
                      });
                      
                      // Droplets
@@ -124,7 +124,7 @@ export default function MatrixRain({ contentRef }: Props) {
                             vx: (Math.random() - 0.5) * 3, // slightly wider spread
                             vy: -(Math.random() * 1.5 + 1.0), // slightly more height
                             life: 0.4 + Math.random() * 0.3,
-                            color: Math.random() > 0.5 ? 'rgba(200, 200, 200, 0.6)' : 'rgba(150, 150, 150, 0.6)',
+                            color: Math.random() > 0.5 ? 'rgba(126, 186, 152, 0.6)' : 'rgba(160, 176, 166, 0.6)',
                          });
                     }
                 }
